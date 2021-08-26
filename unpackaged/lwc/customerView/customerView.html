@@ -1,0 +1,44 @@
+<template>
+  <lightning-card title="Customer 360 View" class="slds-page-header__title">
+  
+    <lightning-button label="Navigate back" slot="actions" onclick={navigateToback} ></lightning-button>  <!--<template for:each={accntInfo} for:item="wrapperList">
+    <lightning-layout key={wrapperList.accounts}>
+    <lightning-layout-item size="6">
+        <c-account-detail accdetails ={wrapperList.accounts}></c-account-detail>
+    </lightning-layout-item>
+    <lightning-layout-item size="6">
+      <c-case-details casedetails ={wrapperList.accounts.cases}></c-case-details>
+  </lightning-layout-item>
+  </lightning-layout>
+  <lightning-layout key={wrapperList.accounts}>
+    <lightning-layout-item size="6">
+      <c-loan-detail loan-app={wrapperList.accounts.loanAppl}></c-loan-detail>
+   </lightning-layout-item>
+    <lightning-layout-item size="6">
+      <c-payment-detail></c-payment-detail>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>
+</lightning-card>-->
+
+  <template for:each={accntInfo} for:item="wrapperList">
+  <lightning-card title={wrapperList.accounts.name}  key={wrapperList.accounts} >
+  <lightning-tabset  variant="vertical">
+  <lightning-tab label="Account " value={wrapperList.accounts.name} key={wrapperList.accounts}>
+    <c-account-detail accdetails ={wrapperList.accounts}></c-account-detail>
+  </lightning-tab>
+  <lightning-tab label="Cases" value={wrapperList.accounts.caseHeader} key={wrapperList.accounts}>
+    <c-case-details casedetails ={wrapperList.accounts.cases}></c-case-details>
+  </lightning-tab>
+  <lightning-tab label="Loan Applications" value={wrapperList.accounts.loanHeader} key={wrapperList.accounts}>
+   <c-loan-detail loan-app={wrapperList.accounts.loanAppl} acc-name={wrapperList.accounts.paymentHeader}></c-loan-detail>
+  </lightning-tab>
+  <lightning-tab label="Payments" value={wrapperList.accounts.paymentHeader} key={wrapperList.accounts}>
+    <c-payment-detail onactive={activetabHandler}></c-payment-detail>
+  </lightning-tab>
+</lightning-tabset>
+</lightning-card>
+  </template>
+
+</lightning-card>
+</template>

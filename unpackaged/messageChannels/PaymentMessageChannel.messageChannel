@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Lightning Message Channel sends information between LWC Component</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>payment Details</description>
+        <fieldName>paymentDetails</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>loan</description>
+        <fieldName>loanDetails</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>acc</description>
+        <fieldName>accName</fieldName>
+    </lightningMessageFields>
+    <masterLabel>MyMessageChannel</masterLabel>
+</LightningMessageChannel>

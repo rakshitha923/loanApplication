@@ -1,0 +1,16 @@
+<template>
+    <div class="boarder">
+    <lightning-card title="Loan Applications" icon-name="action:record" >
+        <div class="size">
+            <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                onrowaction={handleRowAction}
+                sortable>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</div>
+
+</template>

@@ -1,0 +1,6 @@
+.boarder{
+    border-style: solid;
+    border-width: 2px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+ }

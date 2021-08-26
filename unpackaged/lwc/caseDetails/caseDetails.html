@@ -1,0 +1,13 @@
+<template>
+    <div class="boarder">
+    <lightning-card title="Case Details" icon-name="action:record" >
+            <lightning-datatable
+                key-field="id"
+                data={casedetails}
+                columns={columns}
+                onrowaction={handleRowAction}
+                sortable>
+            </lightning-datatable>
+    </lightning-card>
+</div>
+</template>

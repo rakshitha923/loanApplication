@@ -1,0 +1,17 @@
+<template>
+   <div class="boarder">
+   <lightning-card title={accdetails.name} icon-name="standard:account" >
+       <p  class="slds-p-around_x-small">
+        <b>CreditScore:</b><lightning-formatted-number value={accdetails.creditScore}></lightning-formatted-number>
+       </p>
+       <p  class="slds-p-around_x-small">
+         <b>Addhar KYC:</b>{accdetails.adharKYC}
+        </p>
+        <p  class="slds-p-around_x-small">
+         <b>Account Number:</b><lightning-formatted-text value={accdetails.accNumber}></lightning-formatted-text>
+        </p>
+     
+      <lightning-button label="View Detail" slot="actions" onclick={navigateToDetail} value={accdetails.id}></lightning-button>
+   </lightning-card>
+</div>
+</template>

@@ -1,0 +1,19 @@
+<apex:page standardController="Account"  showHeader="false" sidebar="false" extensions="AccountStandardController" recordSetVar="accounts" >
+    <apex:includeLightning />    
+    <div id="LightningComponentid" />   
+<!-- the Id of div tag which will be used to render your LWC component  -->
+    <script>
+           var GetIDs= '{!accIds}';
+        $Lightning.use("c:customersView", function() {
+            $Lightning.createComponent("c:customerView",
+            { 
+                recordIds : GetIDs
+            },
+            "LightningComponentid", // the Id of div tag where your component will be rendered
+            function(cmp) {
+                console.log('Calling the LWC Component');
+                
+            });
+        });
+    </script>
+</apex:page>
